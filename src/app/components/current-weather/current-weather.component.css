@@ -1,0 +1,32 @@
+.title{
+    font-size: 26;
+    text-align:center;
+    color:#fff0ff;
+    font-weight:bold;
+    margin-top:10;
+}
+
+.temperature{
+    font-size: 40;
+    text-align:center;
+    color:#ffffff;
+    font-weight:bold;
+    margin-top:35%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.form-control {
+    border-bottom-color:#7c015d;
+    border-bottom-width: 2;
+    margin: 5 0;
+    font-size:20;
+    padding: 8 4;
+}
+
+.scroll-down{
+    margin-top:80%;
+    margin-left:auto;
+    margin-right:auto;
+    color:#fff0ff;
+
+}
