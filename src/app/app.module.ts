@@ -5,6 +5,9 @@ import { AppComponent } from "./app.component";
 import { CurrentWeatherComponent } from "./components/current-weather/current-weather.component";
 import {NativeScriptFormsModule} from 'nativescript-angular/forms';
 import { DetailWeatherComponent } from './components/detail-weather/detail-weather.component';
+import {NativeScriptRouterModule} from "nativescript-angular/router"
+import {routes,navigatableComponents} from './app.routing';
+import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -20,11 +23,16 @@ import { DetailWeatherComponent } from './components/detail-weather/detail-weath
         NativeScriptModule,
          NativeScriptFormsModule,
          NativeScriptHttpModule,
+         NativeScriptRouterModule,
+         NativeScriptRouterModule.forRoot(routes),
+         NativeScriptUISideDrawerModule
+
     ],
     declarations: [
         AppComponent,
         CurrentWeatherComponent,
         DetailWeatherComponent,
+        ...navigatableComponents
     ],
     providers: [],
     schemas: [

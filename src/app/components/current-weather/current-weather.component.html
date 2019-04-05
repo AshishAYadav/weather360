@@ -1,6 +1,20 @@
-<StackLayout >
-                <Label id="title" class="title" [text]="currentTitle" fontSize="22" onload="onloaded"></Label>
-                <Label class="temperature" [text]="currentCelcius"  fontSize="38"></Label>
-                <Label class="scroll-down" [text]="scrollDown" fontSize="24"></Label>
-               <!-- <Button class="get" text="update"></Button>-->
-</StackLayout>
+
+        <GridLayout tkMainContent class="page page-content" rows="44, *" backgroundImage="{{ img }}">
+            <StackLayout orientation="horizontal" width="100%" height="100%">
+                <Label text="&#xf0c9;"  width="10%" height="100%" class="fa-solid weather" style="padding:5"></Label>
+                <Label text="&#xf104;" value="" (tap)="changeCity(0)" width="10%" height="100%" class="fa-solid weather" style="padding:10"></Label>
+                <Label text="{{ name }}" width="50%" height="100%" class="center city-name" style="padding:10">></Label>
+                <Label text="&#xf105;" (tap)="changeCity(1)" width="10%" height="100%" class="fa-solid weather" style="padding:10"></Label>
+                <Label text="&#xf067;" width="10%" height="100%" class="fa-solid weather" style="padding:5"></Label>
+            </StackLayout>
+            <ScrollView row="1">
+                <StackLayout>
+                    <GridLayout columns="auto,100" rows="auto,auto" width="100%" height="100%" class="center forecast" style="padding-top:200em;">
+                        <Label text="&#xf185;" row="0" col="0" class="fa sun m-r-20" style="padding:40em"></Label>
+                        <Label text="{{ tempc }}" row="0" col="0" class="temp" style="padding-left:80em"></Label>
+                        <Label text="°C | °F" row="0" col="2" class="tempt m-l-0"></Label>
+                    </GridLayout>
+                    <Label text="&#xf103;" width="10%" height="90%" class="fa-solid downarrow" style="padding-top:200em"></Label>
+                </StackLayout>
+            </ScrollView>
+        </GridLayout>
